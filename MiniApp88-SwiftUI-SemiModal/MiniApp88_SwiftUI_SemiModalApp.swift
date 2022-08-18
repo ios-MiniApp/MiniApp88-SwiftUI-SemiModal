@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import PartialSheet
 
 @main
 struct MiniApp88_SwiftUI_SemiModalApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .attachPartialSheetToRoot()
         }
     }
 }

@@ -11,6 +11,9 @@
 		871E128C28AE0EE100F0B1E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871E128B28AE0EE100F0B1E3 /* ContentView.swift */; };
 		871E128E28AE0EE200F0B1E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 871E128D28AE0EE200F0B1E3 /* Assets.xcassets */; };
 		871E129128AE0EE200F0B1E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 871E129028AE0EE200F0B1E3 /* Preview Assets.xcassets */; };
+		871E129828AE120F00F0B1E3 /* HalfModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871E129728AE120F00F0B1E3 /* HalfModalView.swift */; };
+		871E129B28AE1A6B00F0B1E3 /* FloatingPanel in Frameworks */ = {isa = PBXBuildFile; productRef = 871E129A28AE1A6B00F0B1E3 /* FloatingPanel */; };
+		871E129E28AE1B4100F0B1E3 /* PartialSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 871E129D28AE1B4100F0B1E3 /* PartialSheet */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,7 @@
 		871E128B28AE0EE100F0B1E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		871E128D28AE0EE200F0B1E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		871E129028AE0EE200F0B1E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		871E129728AE120F00F0B1E3 /* HalfModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				871E129E28AE1B4100F0B1E3 /* PartialSheet in Frameworks */,
+				871E129B28AE1A6B00F0B1E3 /* FloatingPanel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +59,7 @@
 			children = (
 				871E128928AE0EE100F0B1E3 /* MiniApp88_SwiftUI_SemiModalApp.swift */,
 				871E128B28AE0EE100F0B1E3 /* ContentView.swift */,
+				871E129728AE120F00F0B1E3 /* HalfModalView.swift */,
 				871E128D28AE0EE200F0B1E3 /* Assets.xcassets */,
 				871E128F28AE0EE200F0B1E3 /* Preview Content */,
 			);
@@ -83,6 +90,10 @@
 			dependencies = (
 			);
 			name = "MiniApp88-SwiftUI-SemiModal";
+			packageProductDependencies = (
+				871E129A28AE1A6B00F0B1E3 /* FloatingPanel */,
+				871E129D28AE1B4100F0B1E3 /* PartialSheet */,
+			);
 			productName = "MiniApp88-SwiftUI-SemiModal";
 			productReference = 871E128628AE0EE100F0B1E3 /* MiniApp88-SwiftUI-SemiModal.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,10 @@
 				Base,
 			);
 			mainGroup = 871E127D28AE0EE100F0B1E3;
+			packageReferences = (
+				871E129928AE1A6B00F0B1E3 /* XCRemoteSwiftPackageReference "FloatingPanel" */,
+				871E129C28AE1B4100F0B1E3 /* XCRemoteSwiftPackageReference "PartialSheet" */,
+			);
 			productRefGroup = 871E128728AE0EE100F0B1E3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				871E128C28AE0EE100F0B1E3 /* ContentView.swift in Sources */,
+				871E129828AE120F00F0B1E3 /* HalfModalView.swift in Sources */,
 				871E128A28AE0EE100F0B1E3 /* MiniApp88_SwiftUI_SemiModalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +353,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		871E129928AE1A6B00F0B1E3 /* XCRemoteSwiftPackageReference "FloatingPanel" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scenee/FloatingPanel";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		871E129C28AE1B4100F0B1E3 /* XCRemoteSwiftPackageReference "PartialSheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AndreaMiotto/PartialSheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		871E129A28AE1A6B00F0B1E3 /* FloatingPanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 871E129928AE1A6B00F0B1E3 /* XCRemoteSwiftPackageReference "FloatingPanel" */;
+			productName = FloatingPanel;
+		};
+		871E129D28AE1B4100F0B1E3 /* PartialSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 871E129C28AE1B4100F0B1E3 /* XCRemoteSwiftPackageReference "PartialSheet" */;
+			productName = PartialSheet;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 871E127E28AE0EE100F0B1E3 /* Project object */;
 }

@@ -6,11 +6,35 @@
 //
 
 import SwiftUI
+import PartialSheet
 
 struct ContentView: View {
+    @State var showPartial = false
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            Color.yellow
+                .ignoresSafeArea()
+
+            Button("Half Modal") {
+                showPartial.toggle()
+            }
+            .partialSheet(
+                isPresented: $showPartial,
+                type: PSType.scrollView(
+                    height: UIScreen.main.bounds.height * (2/3),
+                    showsIndicators: true
+                ),
+                iPhoneStyle: .init(background: .solid(.white),
+                                   handleBarStyle: .none,
+                                   cover: .disabled,
+                                   cornerRadius: 30
+                )
+            ) {
+                HalfModalView()
+                    //.interactiveDismissDisabled()
+            }
+        }
     }
 }
 
